@@ -1,0 +1,11 @@
+{
+  "name": "@package1/components",
+  "version": "1.0.0",
+  "description": "components",
+  "main": "index.js",
+  "author": "rg",
+  "publishConfig": {
+    "registry": "###"
+  },
+  "gitHead": "###"
+}

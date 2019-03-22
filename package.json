@@ -1,0 +1,61 @@
+{
+  "name": "platform_frontend",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "package1/",
+      "package2/",
+      "package2/src/**"
+    ],
+    "nohoist": [
+      "react-scripts",
+      "react-scripts/**",
+      "**/jest/**"
+    ]
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/spa/"
+    ],
+    "projects": [
+      "<rootDir>/playbook/*"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "9",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.6.1",
+    "lerna": "^3.4.3",
+    "lint-staged": "^7.2.2",
+    "prettier": "^1.14.2",
+    "prettier-eslint": "^8.8.1",
+    "prettier-eslint-cli": "^4.7.0"
+  },
+  "lint-staged": {
+    "./**/*.{js,jsx}": [
+      "yarn eslint",
+      "git add"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env"
+      ]
+    ]
+  }
+}

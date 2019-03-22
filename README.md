@@ -12,20 +12,17 @@ Pull down the repo and run the following command in the application root
 
 ```
 yarn install
+lerna link
 ```
 
 This will install dependencies for all workspaces, hoisting the shared ones to the root `node_modules` folder.
 
-To run the Package1
-
-```
-cd Package1
-yarn storybook
-```
-
-To run the Package1
+To run the Package2
 
 ```
 cd Package1
 yarn start
 ```
+
+Observe the compilation error: Can't resolve '@babel/runtime/helpers/esm/extends' in '/Users/Helene/Documents/GitHub/monorepo/node_modules/history/esm'.
+The same error would appear if @babel/runtime/helpers/esm/extends is imported from package2/index.js

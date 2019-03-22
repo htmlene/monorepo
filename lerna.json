@@ -1,0 +1,14 @@
+{
+  "packages": ["package1/", "package1/src/**", "package2/"],
+  "version": "1.0.0",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "ignoreChanges": ["*.md"]
+    },
+    "bootstrap": {
+      "ignore": "package1"
+    }
+  }
+}
